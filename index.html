@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <main class="main">
+            <div class="main__item">
+                <h1 class="main__title">Столовая твоей мечты</h1>
+                <p class="main__text">Место для теплых встреч</p>
+                <a href="#cost" class="link">Сделать заказ и окунуться в мир фантазии</a>
+            </div>
+            <img class="img" src="file:///C:/Users/Misha/Downloads/logo.png" alt="" width="500px" height="300px">
+           </div>
+        </main>
+        <section class="products">
+            <h2 class="title-h2">Наше меню</h2>
+            <div class="grid">
+              <img class="img" src="file:///C:/Users/Misha/Downloads/%D0%BC%D0%B5%D0%BD%D1%8E%201.jpg" alt="" width="500px" height="700px">
+             <img class="img" src="file:///C:/Users/Misha/Downloads/%D0%BC%D0%B5%D0%BD%D1%8E2.jpg" alt="" width="500px" height="700px">
+            </div>
+        </section>
+        <div class="cost" id="cost">
+            <div class="cost__title">
+                <svg class="circle" width="1" height="2" viewBox="0 0 200 200">
+                    <path id="circleShape" class="circle__shape" d="M 20, 100 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0" fill="none"></path>
+                    <path class="circle__arrow" d="M 75 100 L 125 100 L 110 85 M 125 100 L 110 115" fill="none" stroke="#2B2024" stroke-width="2"></path>
+                    <text class="circle__text">
+                        <textPath href="#circleShape">
+                            Рассчитать стоимость
+                        </textPath>
+                    </text>
+                </svg>
+            </div>
+            <div class="cost__calc">
+                <form class="form">
+                    <p class="form__text">Выберите блюдо:</p>
+                    <select id="selectProduct" class="form__select">
+                        <option value="0" selected disabled>Выбрать из списка</option>
+                        <option value="800">Мясо Щивонха (800 тг)</option>
+                        <option value="860">Бефстроганов (860 тг)</option>
+                        <option value="840">Мясо по гречески (840 тг)</option>
+                        <option value="450">Бесбармак 1/2 порция (450 тг)</option>
+                        <option value="550">Курица по китайски (550 тг)</option>
+                        <option value="500">Плов 1 порция (500 тг)</option>
+                        <option value="580">Пельмени 1  (580 тг)</option>
+                        <option value="370">Вареники 1 порция (370 тг)</option>
+                        <option value="550">Котлета Канагат 1 порция (550 тг)</option>
+                        <option value="450">Бифштекс 1 порция (450 тг)</option>
+                        <option value="350">Каша рисовая 1 порция (350 тг)</option>
+                        <option value="260">Каша геркулесовая 1 порция (260 тг)</option>
+                        <option value="250">Каша манная 1 порция (250 тг)</option>
+                        <option value="800">Мясо по тайски (800 тг)</option>
+                        <option value="750">Мясо по  французски (750 тг)</option>
+                        <option value="650">Бесбармак 1 порция (650 тг)</option>
+                        <option value="460">Курица в сметанном соусе (460 тг)</option>
+                        <option value="470">Манты 1 порция (470 тг)</option>
+                        <option value="380">Плов 1/2 порция (380 тг)</option>
+                        <option value="400">Пельмени 1/2 порция (400 тг)</option>
+                        <option value="260">Вареники 1/2 порция (260 тг)</option>
+                        <option value="300">Котлета канагат 1/2 порция (300 тг)</option>
+                        <option value="600">Котлета Амалдина (600 тг)</option>
+                        <option value="240">Каша рисовая 1/2 порция (240 тг)</option>
+                        <option value="200">Каша геркулесовая 1/2 порция (200 тг)</option>
+                        <option value="190">Каша манная 1/2 порция (190 тг)</option>
+                    </select>
+                    <p class="form__text">Укажите количества:</p>
+                    <input id="quantityProduct" class="form__input" type="number" value="1" min="1">
+                    <button type="button" class="link" id="btnProduct">Заказать</button>
+                </form>
+                <div id="infoProduct" class="total" style="display:none;">
+                    <p class="total__price">Итог: <span id="priceProduct"></span> Тг, ваш заказ принесут через 10минут</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
